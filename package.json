@@ -1,0 +1,17 @@
+{
+  "name": "IM",
+  "version": "1.0.0",
+  "description": "直播IM通信",
+  "main": "s19969_c.js",
+  "scripts": {
+    "start": "node s19969_c.js"
+  },
+  "author": "KZ",
+  "license": "Not OpenSources",
+  "dependencies": {
+    "log4js": "^2.4.1",
+    "redis": "^2.7.1",
+    "request": "^2.81.0",
+    "socket.io": "^1.7.4"
+  }
+}

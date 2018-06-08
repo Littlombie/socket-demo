@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+.box {
+  width: 95%;
+  height: 400px;
+  margin: 0 auto;
+  overflow: scroll;
+  border: 2px solid #000;
+  box-sizing: border-box;
+}
+.oper {
+  width: 95%;
+  margin: 20px auto;
+}
+.oper div {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  margin: 10px 0;
+}
+.oper div input {
+  width: 60%;
+  height: 30px;
+  line-height: 30px;
+}
+.oper div span {
+  flex: 1;
+  margin-left: 10px;
+  height: 35px;
+  line-height: 35px;
+}
+.sendBtnOne {
+  display: block;
+}
+.oper .intext {
+  width: 100%;
+  justify-content: flex-start;
+}
+.intext input[type=text] {
+  width: 60%;
+  height: 40px;
+  line-height: 40px;
+}
+.intext input[type=file] {
+  width: 20%;
+}
+button {
+  background: #ccc;
+  padding: 5px 10px;
+  border: 0;
+  margin-left: 20px;
+}
+.intext button {
+  background: #ccc;
+  padding: 5px 10px;
+  border: 0;
+  margin-left: 20px;
+}
+#sendBtnOne {
+  margin-left: 20px;
+}
+.box-emoji {
+  width: 80%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 200px;
+  /* overflow-y: scroll; */
+  background: #fff;
+  border: 1px solid #ccc;
+}
+.box-emoji  ul {
+  width: 95%;
+  height: 100%;
+}
+.box-emoji ul li {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.closeBox{
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  z-index: 9;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 40px;
+  text-align: center;
+  background: #ccc;
+  border-radius: 50%;
+}
+.mess {
+  margin: 10px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.mess h4 {
+  color: #f00
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf8">
+    <title>socket-demo</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="box" id="box"></div>
+    <div class="oper">
+        <div><span>group: </span> <input type="text" id="group" value="group1"  ref="group" /><br/></div>
+        <div><span> from:</span> <input type="text" id="fromname" placeholder="发送者的名字"   ref="from" /><br/></div>
+        <div><span> to：</span><input type="text" id="toname" placeholder="接收者的名字" ref="toname" /><br/></div>
+        <button id="sendAddUser" @click="sendAddUser">连接</button><br/>
+        <div class="intext">
+            <input id="inputText" type="text" placeholder="请输入内容" ref="sendtext"> 
+            <button id="showEmoji" @click="showEmoji">选择表情</button> 
+            <button id="sendBtnOne" @click="sendOne">发送消息</button>
+        </div>
+        <div id="licenseBox" class="ctn-licence">
+            上传图片
+            <button id="submit_btn" type="submit" name="submit" @click="uploadFiles" style="visibility: hidden;">上传图片</button>
+            <input type="file" id="upload"  v-model="file" name="file"  style="height:40px" value="上传图片"> 
+        </div>
+    </div>
+    <div v-show="showEmojis" class="box-emoji">
+        <ul>
+            <li v-for="(item,index) in emoji" @click="select(item)" ><img :src="'images/faces/'+item" /></li>
+        </ul>
+        <span @click="closebox" class="closeBox">X</span>
+    </div>
+  </div>
+  <div>
+      操作：
+        <p>多人操作 打开多个页面</p>
+        <p>1.先在from 里边填写自己的名称</p>
+        <p>2.点击连接</p>
+        <p>3.发消息前写上发送人的名称（to）</p>
+  </div>
+</body>
+<!-- 引入jQuery -->
+<script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- 引入socket -->
+<script type="text/javascript" src="js/socket.io.js"></script>
+<!-- vue 框架 -->
+<script src="https://cdn.bootcss.com/vue/2.5.2/vue.min.js"></script>
+
+<!-- 加解密带文件上传： crypto -->
+<script type="text/javascript" src="js/crypto1/crypto/crypto.js"></script>
+<script type="text/javascript" src="js/crypto1/hmac/hmac.js"></script>
+<script type="text/javascript" src="js/crypto1/sha1/sha1.js"></script>
+<!-- 转码base64 -->
+<script type="text/javascript" src="js/base64/base64.js"></script>
+<!-- md5加密 -->
+<script type="text/javascript" src="js/base64/md5.js"></script>
+<script type="text/javascript" src="js/crypto1/3des/tripledes.js"></script>
+<script type="text/javascript" src="js/crypto1/3des/mode-ecb.js"></script>
+<!-- emoji表情包 -->
+<script src="js/emoji.js"></script>
+<!-- scoketurl 配置以及upload oss 上传js 聊天处理  -->
+<script src="js/script.js"></script>
+
+</html>
+
